@@ -1,4 +1,6 @@
 Projet : Ransomware Pédagogique (C2 & Malware)
+<img width="1600" height="1201" alt="unnamed" src="https://github.com/user-attachments/assets/e9634ab1-d1d4-4d76-9082-31d17ed0fbaa" />
+
 1. Présentation du Projet
 
 Ce projet a été réalisé dans le cadre du module Malware et sécurité offensive en Python. Il consiste en la conception d'un ransomware fonctionnel composé d'un serveur de contrôle (C2) et d'un agent malveillant (Client). L'objectif est de comprendre les mécanismes de manipulation du système de fichiers, le chiffrement symétrique et la communication réseau asynchrone.
