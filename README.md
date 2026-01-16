@@ -13,6 +13,8 @@ Le projet met en pratique les concepts suivants :
 
     Manipulation Système : Parcours récursif de l'arborescence Linux et exécution de commandes shell via Python.
 
+
+
 2. Architecture Globale
 
 Le système repose sur une architecture Client-Serveur robuste.
@@ -22,6 +24,9 @@ Il agit comme l'interface de l'attaquant. Il attend les connexions entrantes, re
 Le Malware (Client)
 
 L'agent s'exécute sur la machine victime. Dès son lancement, il s'identifie de manière unique et passe en mode "écoute" pour traiter les commandes envoyées par le serveur.
+
+
+
 3. Fonctionnalités et Fonctionnement Technique
 A. Identification et Exfiltration Initiale
 
@@ -55,6 +60,8 @@ D. Reverse Shell Interactif
 
 Toute commande non reconnue comme une commande interne (ex: ls, whoami, cat) est transmise au système via subprocess.check_output. Le résultat de la commande est ensuite renvoyé au serveur pour affichage.
 
+
+
 4. Bonus : Journalisation et Analyse (Logs)
 
 Conformément aux exigences de la Partie 2 du sujet, un système de logs complet a été intégré :
@@ -62,6 +69,9 @@ Conformément aux exigences de la Partie 2 du sujet, un système de logs complet
     Côté Client : Création d'un fichier caché ~/.system_trace.log. Il enregistre chaque succès de chiffrement, chaque fichier reçu et chaque commande exécutée. Cela permet à l'attaquant de vérifier l'état de l'infection.
 
     Côté Serveur : Génération d'un fichier c2_history.log sur la machine de l'attaquant, archivant toutes les commandes envoyées avec un horodatage précis (date et heure).
+
+
+
 
 5. Guide d'Utilisation (Lancement du Projet)
 Prérequis
@@ -117,6 +127,8 @@ Une fois la connexion établie, le serveur affiche le menu d'aide. Vous pouvez a
     Exfiltration : Tapez GET Documents/secret.txt pour copier un fichier de la victime vers votre machine d'attaquant.
 
     Infiltration : Tapez SEND payload.sh pour envoyer un nouveau fichier malveillant sur la machine victime.
+
+
 
 
 6. Analyse des Limites
