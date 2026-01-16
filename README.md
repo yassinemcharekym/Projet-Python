@@ -1,5 +1,5 @@
 Projet : Ransomware Pédagogique (C2 & Malware)
-<img width="1600" height="1201" alt="unnamed" src="https://github.com/user-attachments/assets/e9634ab1-d1d4-4d76-9082-31d17ed0fbaa" />
+![unnamed-1](https://github.com/user-attachments/assets/47209242-9b54-492d-9b49-4ce8f8a1386d)
 
 1. Présentation du Projet
 
