@@ -147,6 +147,6 @@ Une fois la connexion établie, le serveur affiche le menu d'aide. Vous pouvez a
     Furtivité : Les communications circulent en clair sur le réseau. Dans un scénario réel, l'utilisation de TLS (SSL) serait nécessaire pour échapper aux systèmes de détection d'intrusion (IDS).
 
 
-   ![IPSSI-logo-300](https://github.com/user-attachments/assets/491f37df-47ab-4e26-aa78-68a24d7fe149)
+   ![IPSSI-logo-300](https://github.com/user-attachments/assets/491f37df-47ab-4e26-aa78-68a24d7fe149) <img width="320" height="320" alt="python-logo-png_seeklogo-332789" src="https://github.com/user-attachments/assets/4c83be35-aa68-4a6b-8ce7-bc42d442bb8e" />  
 
 
