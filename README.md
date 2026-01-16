@@ -1,4 +1,5 @@
 Projet : Ransomware Pédagogique (C2 & Malware)
+Ce projet a été réalisé par Yassine MCHAREK et Malik Adonis
 ![unnamed-1](https://github.com/user-attachments/assets/47209242-9b54-492d-9b49-4ce8f8a1386d)
 
 1. Présentation du Projet
