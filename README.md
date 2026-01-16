@@ -1,3 +1,6 @@
+![IPSSI-logo-300](https://github.com/user-attachments/assets/d9c5b395-9cbf-4cc5-a680-6e7313716b49)
+
+
 Projet : Ransomware Pédagogique (C2 & Malware)
 
 Ce projet a été réalisé par Yassine MCHAREK et Malik Adonis
@@ -139,4 +142,8 @@ Une fois la connexion établie, le serveur affiche le menu d'aide. Vous pouvez a
     Chiffrement : L'algorithme XOR est vulnérable à l'analyse de fréquence. Une amélioration serait l'utilisation de l'AES-256.
 
     Furtivité : Les communications circulent en clair sur le réseau. Dans un scénario réel, l'utilisation de TLS (SSL) serait nécessaire pour échapper aux systèmes de détection d'intrusion (IDS).
+
+
+   ![IPSSI-logo-300](https://github.com/user-attachments/assets/491f37df-47ab-4e26-aa78-68a24d7fe149)
+
 
