@@ -70,4 +70,4 @@ def start_c2():
     conn.close()
 
 if __name__ == "__main__":
-    start_c2()
+    start_c2() .
